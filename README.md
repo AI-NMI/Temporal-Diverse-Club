@@ -1,10 +1,6 @@
-# Temporal-Diverse-Club
-
-This repository contains the implementation and datasets for the "Temporal-Diverse-Club" analysis. We provide three datasets of varying scales, along with the original raw data. This codebase allows for the replication of our findings regarding temporal network dynamics, covering diverse metrics from participation coefficients to complex club transitions.
-
 ## Overview
 
-The repository is structured to analyze three distinct types of network data. We summarize the contributions and distinctions of the analyses performed in the following modules:
+This repository provides the official implementation and datasets for the study "Temporal Diverse Club Phenomenon in Complex Dynamical Systems," introducing the **Temporal Diverse Club (TDC)** as a novel topological framework to quantify the integrative backbone of evolving networks. Distinct from the Temporal Rich Club (TRC), which consolidates local resources through high-strength connections, the TDC identifies nodes that persistently maintain diverse cross-community bridges over time, acting as critical mediators for global information flow and system adaptability. Our multidisciplinary analysis verifies this principle across three distinct scales: in **human brain networks** (microscopic), we reveal that TDC nodes are centrally anchored in the higher-order cognitive systems and exhibit a "pathological rigidity" in Schizophrenia patients; in the **US air transportation network** (macroscopic), TDC airports function as national gateways that facilitate system-wide synchronization significantly faster than regional TRC hubs; and in **ant colony social networks** (mesoscopic), we uncover a "social maturation" mechanism where individuals transition from early-phase, exploratory TDC roles driven by weak ties to mature, consolidated TRC leadership positions. By integrating these findings, this codebase offers a unified toolkit—including algorithms for weighted participation coefficients and community alignment—to explore how the temporal persistence of functional architecture, rather than static topology, governs the resilience and evolutionary trajectories of complex systems.
 
 ### 1. Neuroscience Analysis
 **File:** `neuroscience.py`

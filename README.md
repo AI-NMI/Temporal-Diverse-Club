@@ -1,34 +1,35 @@
 ## Overview
 
-This repository provides the official implementation and datasets for the study "Temporal Diverse Club Phenomenon in Complex Dynamical Systems," introducing the **Temporal Diverse Club (TDC)** as a novel topological framework to quantify the integrative backbone of evolving networks. Distinct from the Temporal Rich Club (TRC), which consolidates local resources through high-strength connections, the TDC identifies nodes that persistently maintain diverse cross-community bridges over time, acting as critical mediators for global information flow and system adaptability. Our multidisciplinary analysis verifies this principle across three distinct scales: in **human brain networks** (microscopic), we reveal that TDC nodes are centrally anchored in the higher-order cognitive systems and exhibit a "pathological rigidity" in Schizophrenia patients; in the **US air transportation network** (macroscopic), TDC airports function as national gateways that facilitate system-wide synchronization significantly faster than regional TRC hubs; and in **ant colony social networks** (mesoscopic), we uncover a "social maturation" mechanism where individuals transition from early-phase, exploratory TDC roles driven by weak ties to mature, consolidated TRC leadership positions. By integrating these findings, this codebase offers a unified toolkit, including algorithms for randomization strategy and clubness calculation, to explore how the temporal persistence of functional architecture, rather than static topology, governs the resilience and evolutionary trajectories of complex systems.
+This repository provides the official implementation and datasets for the study "Temporal Diverse Club Phenomenon in Complex Dynamical Systems," introducing the **Temporal Diverse Club (TDC)** as a novel topological framework to quantify the integrative backbone of evolving networks. Distinct from the Temporal Rich Club (TRC), which consolidates local resources through high-strength connections, the TDC identifies nodes that persistently maintain diverse cross-community bridges over time, acting as critical mediators for global information flow and system adaptability. Our multidisciplinary analysis verifies this principle across three distinct scales: in **human brain networks** (microscopic), we reveal that TDC nodes are centrally anchored in the higher-order cognitive systems and exhibit a "pathological rigidity" in Schizophrenia patients; in the **US air transportation network** (macroscopic), TDC airports function as national gateways that facilitate system-wide synchronization significantly faster than regional TRC hubs; and in **ant colony social networks** (mesoscopic), we uncover a "social maturation" mechanism where individuals transition from early-phase, exploratory TDC roles driven by weak ties to mature, consolidated TRC leadership positions. By integrating these findings, this codebase offers a unified toolkit, including algorithms for randomization strategy and clubness calculation, to explore how the temporal persistence of functional architecture, rather than static topology, governs the resilience and evolutionary trajectories of complex systems. We strongly recommend starting with the US airline network. And our main contributions are as follows:
 
 ### 1. Neuroscience Analysis
 **File:** `neuroscience.py`
 
 This module focuses on neurological network data and implements the following analyses:
-* **Participation Coefficient:** Analysis of node integration across modules.
-* **Clubness:** Measurement of the "rich-club" phenomenon or similar structural groupings.
-* **Machine Learning:** Application of ML models for pattern recognition in neural data.
-* **Edge Density:** (Detailed in Supplementary Materials) Analysis of connectivity density changes.
+* **Participation Coefficient:** Analysis of node integration across functional modules (communities).
+* **Clubness:** Measurement of the "rich-club" phenomenon and application to schizophrenia patient detections.
+* **Machine Learning:** Application of ML models (e.g.2D-CNN) for pattern recognition to classify disease states.
+* **Edge Density:** (Detailed in Supplementary Materials) Analysis of connectivity density to distinguish clubness from simple densification.
 
-### 2. Airline Network Analysis
+### 2. US Airline Network Analysis
 **File:** `airline.py`
 
 This module processes temporal flight data to understand transport dynamics:
-* **Temporal Participation Coefficient:** extending the standard metric to time-varying networks.
-* **Clubness:** Identification of central hubs over time.
-* **Traditional Metrics:** Calculation of three standard network science metrics for baseline comparison.
-* **Kuramoto Model:** Simulation of synchronization dynamics on the airline network.
-* **Clique Detection:** (Detailed in Supplementary Materials) Identification of fully connected subgraphs.
+* **Temporal Participation Coefficient:** Analysis of node integration using a temporal-average version.
+* **Clubness:** Measurement of the "rich-club" phenomenon and the temporal-scale linearity.
+* **Traditional Metrics:** Three standard network metrics (Efficiency, Modularity, Clustering Coefficient) for baseline comparison.
+* **Kuramoto Model:** Simulation of global synchronization dynamics.
+* **Clique Detection:** (Detailed in Supplementary Materials) Identification of higher-order fully connected subgraphs.
 
 ### 3. Ant Colony Analysis
 **File:** `ant.py`
 
 This module analyzes social insect interaction networks:
-* **Weighted Participation Coefficient:** Accounting for interaction strength in community integration.
+* **Weighted Participation Coefficient:** Analysis of node integration using a weighted version.
+* **Weighted Randomization:** Implements a specific null model that treats edge weights as parallel edges to preserve strength distribution.
 * **Community Alignment:** An algorithm to align community labels across temporal snapshots.
-* **Strong vs. Weak Networks:** Comparative analysis of tie strengths.
-* **Club Transition:** Tracking how the composition of the "club" changes over time.
+* **Strong vs. Weak Networks:** Comparative analysis of tie strengths to distinguish exploration (weak) from consolidation
+* **Club Transition:** Tracking the evolutionary trajectory of "club" composition (TDC $\rightarrow$ TRC).
 
 ## Data Structure & Parameters
 

@@ -49,8 +49,6 @@ This framework handles temporal data using specific naming conventions. **Please
 
 ## Installation
 
-### Prerequisites
-
 To run the code in this repository, you will need the following dependencies:
 
 * **NetworkX** 3.3
